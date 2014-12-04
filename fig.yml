@@ -1,0 +1,10 @@
+docker1:
+    build: ./docker1/
+    #command: start.sh
+    #command: node client.js
+    ports:
+    - "8000:8000"
+docker2:
+    build: ./docker2/
+    links: 
+    - docker1
